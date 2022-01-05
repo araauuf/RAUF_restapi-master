@@ -7,11 +7,11 @@
         <th>sewa</th>
     </tr>
     <?php
-    foreach($jam as $jm){
-        $kode_barang= $jm['kode_barang'];
-        $merk= $jm['merk'];
-        $harga= $jm['harga'];
-        $sewa= $jm['sewa'];
+    foreach($jam as $jm1){
+        $kode_barang= $jm1['kode_barang'];
+        $merk= $jm1['merk'];
+        $harga= $jm1['harga'];
+        $sewa= $jm1['sewa'];
 
     echo "<tr>
     <td>$kode_barang</td>

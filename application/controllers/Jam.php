@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
 class Jam extends CI_Controller 
 {
     function __construct(){
@@ -19,7 +20,7 @@ class Jam extends CI_Controller
         if(isset($_POST['submit'])){
             $data=array(
                 'kode_barang' =>$this->input->post('kode_barang'),
-                'merek' =>$this->input->post('merek'),
+                'merk' =>$this->input->post('merk'),
                 'harga' =>$this->input->post('harga'),
                 'sewa' =>$this->input->post('sewa'),
             );
@@ -34,9 +35,9 @@ class Jam extends CI_Controller
 
     function edit(){
         if(isset($_POST['submit'])){
-            $jm=$this->input->post('kode_barang');
+            $jm1=$this->input->post('kode_barang');
             $data=array(
-                'merek' =>$this->input->post('merek'),
+                'merk' =>$this->input->post('merk'),
                 'harga' =>$this->input->post('harga'),
                 'sewa' =>$this->input->post('sewa'),
             );

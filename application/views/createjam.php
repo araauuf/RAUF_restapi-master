@@ -1,5 +1,5 @@
 <?php
-echo form_open_multipart('Jam/create');
+echo form_open_multipart('jam/create');
 ?>
 
 <table border='1'>
@@ -12,7 +12,7 @@ echo form_open_multipart('Jam/create');
         <td><?php echo form_input('merk'); ?> </td>
     </tr>
     <tr>
-        <td>$harga</td>
+        <td>harga</td>
         <td><?php echo form_input('harga'); ?> </td>
     </tr>
     <tr>

@@ -55,7 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['api/jam'] = 'api/GetJam/index';
 $route['api/jam/kode_barang/(:any)'] = 'api/GetJam/JamById/$1';
-$route['api/jama/add'] = 'api/GetJam/AddJam';
+$route['api/jam/add'] = 'api/GetJam/AddJam';
 $route['api/jam/update/(:any)'] = 'api/GetJam/UpdateJam/$1';
 $route['api/jam/delete/(:any)'] = 'api/GetJam/DeleteJam/$1';
 

@@ -11,27 +11,27 @@ class GetJam extends RestController{
     }
 
     public function index_get(){
-        $jm = new ModelJam;
-        $resultjm= $jm->get_jam();
-        $this->response($resultjm,200);
+        $jm1 = new ModelJam;
+        $resultjm1= $jm1->get_jam();
+        $this->response($resultjm1,200);
     }
 
     public function JamById_get($kode_barang){ 
-        $jm = new ModelJam;
-        $resultjm= $jm->get_Jam_byid($kode_barang);
-        $this->response($resultjm,200);
+        $jm1 = new ModelJam;
+        $resultjm1= $jm1->get_Jam_byid($kode_barang);
+        $this->response($resultjm1,200);
     }
 
     public function AddJam_post(){
-        $jm = new ModelJam;
+        $jm1 = new ModelJam;
         $data=[
-            'kode_barang '=> $this->input->post('kode_barang'),
-            'merek' => $this->input->post('merek'),
+            'kode_barang'=> $this->input->post('kode_barang'),
+            'merk' => $this->input->post('merk'),
             'harga'=> $this->input->post('harga'),
             'sewa' => $this->input->post('sewa'),
         ];
-        $addjm= $kmr->post_jam($data);
-        if($addjm > 0){
+        $addjm1= $jm1->post_jam($data);
+        if($addjm1 > 0){
             $this->response(
                 [
                     'status' => true,
@@ -46,20 +46,19 @@ class GetJam extends RestController{
                     'pesan' => 'insert gagal'
                 ], RestController::HTTP_BAD_REQUEST
             );
-
         }
     }
 
     public function UpdateJam_put($kode_barang){
-        $jm= new ModelJam;
+        $jm1= new ModelJam;
         $data=[
-            'merek' => $this->put('merek'),
+            'merk' => $this->put('merk'),
             'harga' => $this->put('harga'),
             'sewa' => $this->put('sewa'),
             
         ];
-        $putjm= $jm->put_jam($kode_barang, $data);
-        if($putjm > 0){
+        $putjm1= $jm1->put_jam($kode_barang, $data);
+        if($putjm1 > 0){
             $this->response(
                 [
                     'status' => true,
@@ -77,11 +76,10 @@ class GetJam extends RestController{
 
         }
     }
-
     public function DeleteJam_delete($kode_barang){
-        $jm= new ModelJam;
-        $deljm= $jm->del_jam($kode_barang);
-        if($deljm > 0){
+        $jm1= new ModelJam;
+        $deljm1= $jm1->del_jam($kode_barang);
+        if($deljm1 > 0){
             $this->response(
                 [
                     'status' => true,
